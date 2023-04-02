@@ -3,7 +3,7 @@ const userData =
 [{
       "name": "lou",
       "email": "lousmith@gmail.com",
-      "password": "tester"
+      "password": "tester123"
 }]
 const seedUser = () => User.bulkCreate(userData);
 module.exports = seedUser

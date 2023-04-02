@@ -16,7 +16,7 @@ const newCommentHandler = async (event) => {
         if (response.ok) {
             document.location.replace('/profile');//profile works 
         } else {
-            alert('Failed to create comment');
+            alert('Failed');
         }
     }
 };

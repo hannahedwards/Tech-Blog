@@ -41,4 +41,4 @@ Blog.init(
   }
 );
 
-module.exports = Blog;e
+module.exports = Blog;
