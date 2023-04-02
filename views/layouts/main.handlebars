@@ -5,24 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
-  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/ea78308f93.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div class="">
+  <div class="">
     <header class="">
-      <h1>
-        <a href="/">Tech Blog</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">Profile</a> |
-        <button class="" id="logout">Logout</button> 
-        {{else}}
-        <a href="/profile">Profile</a>
-        <a href="/login">login</a>
-        {{/if}}
+      <nav class="navbar is-dark">
+          <div class="navbar-start navbar-brand">
+              <a class="navbar-item" href="/">
+                <i class="fa-regular fa-comment"></i>
+              </a>
+            <div class="navbar-item has-text-light is-size-3">
+              All Things Tech
+            </div>
+          </div>
+        <div class="navbar-end pt-3">
+          <div class="navbar-item button is-light is-rounded ">
+            <a href="/">Home Page</a>
+          </div>
+          <div class="navbar-item button button is-light is-rounded ">
+            {{#if logged_in}}
+            <a href="/profile">Profile</a> |
+            <button class="" id="logout">Logout</button>
+          </div>
+          <div class="navbar-item button button is-light is-rounded ">
+            {{else}}
+            <a href="/profile">Profile</a>
+            </div>
+            <div>
+              <div class="navbar-item button button is-light is-rounded ">
+                <a href="/login">login</a>
+                {{/if}}
+              </div>
+            </div>
+        </div>
       </nav>
     </header>
     <main class="">
@@ -30,14 +48,15 @@
       {{{ body }}}
     </main>
     <footer>
-      
+
     </footer>
   </div>
 
-<!-- Render script for logged in users only -->
+  <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+
 </body>
 
 </html>
