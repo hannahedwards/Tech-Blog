@@ -1,6 +1,8 @@
 <!-- Loop over each object in the projects array -->
+<div class="tile is-ancestor px-3">
+  <div "tile is-parent">
 {{#each blogs as |blog| }}
-<div class="blog">
+<div class=" tile is-child box blog">
   <div class="">
     <h2>
       <a href="/blogs/{{blog.id}}">{{blog.title}}</a>
@@ -11,4 +13,7 @@
     <p>Posted by {{blog.user.name}} on {{format_date blog.date_created}}</p>
   </div>
 </div>
+<br>
 {{/each}}
+</div>
+</div>

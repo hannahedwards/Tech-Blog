@@ -12,7 +12,7 @@
 <body>
   <div class="">
     <header class="">
-      <nav class="navbar is-dark">
+      <nav class="navbar is-fixed-top is-dark">
           <div class="navbar-start navbar-brand">
               <a class="navbar-item" href="/">
                 <i class="fa-regular fa-comment"></i>
@@ -25,14 +25,12 @@
           <div class="navbar-item button is-light is-rounded ">
             <a href="/">Home Page</a>
           </div>
-          <div class="navbar-item button button is-light is-rounded ">
+          <div class="">
             {{#if logged_in}}
             <a href="/profile">Profile</a> |
-            <button class="" id="logout">Logout</button>
-          </div>
-          <div class="navbar-item button button is-light is-rounded ">
+            <button class="navbar-item button button is-light is-rounded " id="logout">Logout</button>
             {{else}}
-            <a href="/profile">Profile</a>
+            <a class="navbar-item button button is-light is-rounded " href="/profile">Profile</a>
             </div>
             <div>
               <div class="navbar-item button button is-light is-rounded ">
@@ -43,6 +41,9 @@
         </div>
       </nav>
     </header>
+    <br>
+    <br>
+    <br>
     <main class="">
       <!-- Render the sub layout -->
       {{{ body }}}

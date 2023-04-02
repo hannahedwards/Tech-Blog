@@ -1,36 +1,36 @@
-<div class="">
-  <div class="">
-    <h2>Welcome, {{name}}!</h2>
+<div class="hero is-small">
+  <div class="hero-body">
+    <h2 class="title">Welcome, {{name}}!</h2>
   </div>
 </div>
 
-<div class="">
-  <div class="">
-    <h3>Create a New Blog:</h3>
-
-    <form class="form new-blog-form">
-      <div class="form-group">
-        <label for="blog-title">Blog Title:</label>
-        <input class="form-input" type="text" id="blog-title" name="blog-title" />
-      </div>
-      <div class="form-group">
-        <label for="blog-content">Content:</label>
-        <textarea class="form-input" id="blog-content" name="blog-content"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="">Post</button>
-      </div>
-    </form>
+<div class="tile is-ancestor px-3">
+  <div class="tile is-4 is-vertical is-parent">
+    <div class="tile is-child box">
+      <p class="title">Create a new blog</p>
+      <form class="form new-blog-form">
+        <div class="form-group">
+          <label for="blog-title">Blog Title:</label>
+          <input class="form-input" type="text" id="blog-title" name="blog-title" />
+        </div>
+        <div class="form-group">
+          <label for="blog-content">Content:</label>
+          <textarea class="form-input" id="blog-content" name="blog-content"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="">Post</button>
+        </div>
+      </form>
+    </div>
   </div>
 
+  <div class="tile is-4 is-vertical is-parent">
+    <div class="tile is-child box">
+      {{#if blogs.length}}
+      <div class="blog-list">
+        <h3>Your Blogs:</h3>
 
-  {{#if blogs.length}}
-  <div class="blog-list">
-    <h3>Your Blogs:</h3>
-
-    {{#each blogs as |blog|}}
-    <div class="">
-      <div class="">
+        {{#each blogs as |blog|}}
         <p><a href="/blogs/{{blog.id}}">{{blog.title}}</a></p>
         <p>{{blog.content}}</p>
         <p>Posted on {{format_date blog.date_created}}</p>
