@@ -14,6 +14,7 @@ First log into mysql and source your schema and then `npm run seed` and then `no
 ## Contributions
 Please ask first!
 ## Screen shots of this project
+<img width="1440" alt="Screenshot 2023-04-03 at 11 39 41 PM" src="https://user-images.githubusercontent.com/44388330/229681463-16de9aef-91a0-4368-a759-c35af871b5b1.png">
 
 ## Questions
 Please feel free to reach out to me at: hannah2edwards3@gmail.com
